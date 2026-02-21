@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.flowLayoutPanelMasalar = new System.Windows.Forms.FlowLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // flowLayoutPanelMasalar
+            // 
+            this.flowLayoutPanelMasalar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelMasalar.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelMasalar.Name = "flowLayoutPanelMasalar";
+            this.flowLayoutPanelMasalar.Size = new System.Drawing.Size(483, 385);
+            this.flowLayoutPanelMasalar.TabIndex = 0;
+            this.flowLayoutPanelMasalar.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(483, 385);
+            this.Controls.Add(this.flowLayoutPanelMasalar);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMasalar;
     }
 }
 

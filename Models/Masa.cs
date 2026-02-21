@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KafeOtomasyon.Models
 {
-    public class Masa
+    public  class Masa
     {
         public int ID { get; set; }
         public string MasaNo { get; set; }
