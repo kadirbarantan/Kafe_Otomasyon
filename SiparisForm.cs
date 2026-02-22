@@ -11,7 +11,6 @@ namespace KafeOtomasyon
     {
         public int secilenMasaID;
 
-        // Veri Erişim Nesneleri
         KategoriVT ktg = new KategoriVT();
         UrunVT uvt = new UrunVT();
         SiparisVT svt = new SiparisVT();
@@ -211,7 +210,6 @@ namespace KafeOtomasyon
             }
         }
 
-        // DİKKAT: 'İ' ve 'I' karmaşasını önlemek için metodu hem Designer'dan bağlaman gerekebilir
         private void btnIptal_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Çıkmak istiyor musunuz?", "Onay", MessageBoxButtons.YesNo) == DialogResult.Yes)

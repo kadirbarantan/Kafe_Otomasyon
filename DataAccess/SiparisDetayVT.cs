@@ -7,7 +7,6 @@ namespace KafeOtomasyon.DataAccess
 {
     public class SiparisDetayVT
     {
-        // 1. GÖREV: Siparişe ürün ekler (Adisyona yeni satır yazar)
         public void UrunEkle(SiparisDetay detay)
         {
             KafeVT kf = new KafeVT();
@@ -23,13 +22,11 @@ namespace KafeOtomasyon.DataAccess
             kf.BaglantiAl().Close();
         }
 
-        // 2. GÖREV: Bir siparişe ait tüm ürünleri (isimleriyle birlikte) listeler
         public List<SiparisDetay> DetaylariGetir(int siparisID)
         {
             List<SiparisDetay> liste = new List<SiparisDetay>();
             KafeVT kf = new KafeVT();
 
-            // Ürün ismini de görmek için Urunler tablosuyla JOIN yapıyoruz
             string sorgu = "SELECT sd.*, u.UrunAd FROM SiparisDetay sd JOIN Urunler u ON sd.UrunID = u.ID WHERE sd.SiparisID = @p1";
             SqlCommand komut = new SqlCommand(sorgu, kf.BaglantiAl());
             komut.Parameters.AddWithValue("@p1", siparisID);

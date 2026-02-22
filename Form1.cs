@@ -67,13 +67,12 @@ namespace KafeOtomasyon
 
             MessageBox.Show(secilenMasaID + " numaralı masaya tıklandı");
             Button btn = (Button)sender;
-            int masaID = (int)btn.Tag; // Masanın ID'sini butondan alıyoruz
+            int masaID = (int)btn.Tag;
 
             SiparisForm frm = new SiparisForm();
-            frm.secilenMasaID = masaID; // ID'yi diğer forma gönderiyoruz
-            frm.ShowDialog(); // Sipariş formunu açıyoruz
+            frm.secilenMasaID = masaID;
+            frm.ShowDialog(); 
 
-            // Form kapandıktan sonra masaların rengini güncellemek için:
             MasaListele();
         }
     }

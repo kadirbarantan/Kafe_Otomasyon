@@ -23,11 +23,11 @@ namespace KafeOtomasyon.DataAccess
                 Kategori k = new Kategori();
                 k.ID = Convert.ToInt32(reader["ID"]);
                 k.KategoriAd = reader["KategoriAd"].ToString();
-                ktg.Add(k); // Hazırladığın listeye eklemeyi unutmuyoruz
+                ktg.Add(k); 
             }
 
             reader.Close();
-            kf.BaglantiAl().Close(); // Kapıyı kapatmayı unutmuyoruz
+            kf.BaglantiAl().Close(); 
             return ktg;
         }
     }
